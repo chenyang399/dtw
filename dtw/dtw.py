@@ -87,13 +87,16 @@ def DTWDistance(s1, s2):
  
     for i in range(len1):
         for j in range(len2):
-            DTW[(i, j)] = dist[i][j] + min(DTW[(i-1, j)],DTW[(i, j-1)], DTW[(i-1, j-1)])
+            # TODO1
+            # 理解dtw算法，此处写入递推公式
  
     return np.sqrt(DTW[len1-1, len2-1])
  
 
-
-
+# TODO2
+# 将yes1和yes3两个音频，每一帧之间的对应关系用图表的形式画出来
+# yes1作为x轴，yes3作为y轴
+# 提示：在动态规划算法之中，保存算入最终dtw距离的两帧的索引index1和index2，以index1为x轴，index2为y轴画图
 
 mfcc_yes1 = fbank(yes1)
 mfcc_no2 = fbank(no2)
