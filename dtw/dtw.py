@@ -93,18 +93,14 @@ def DTWDistance(s1, s2):
     return np.sqrt(DTW[len1-1, len2-1])
  
 
+
 # TODO2
+# 导入wav文件，计算mfcc，用mfcc计算两个wav文件的dtw距离
+# 提示：导入文件可以使用 librosa.load('文件路径')
+
+
+
+# TODO3
 # 将yes1和yes3两个音频，每一帧之间的对应关系用图表的形式画出来
 # yes1作为x轴，yes3作为y轴
 # 提示：在动态规划算法之中，保存算入最终dtw距离的两帧的索引index1和index2，以index1为x轴，index2为y轴画图
-
-mfcc_yes1 = fbank(yes1)
-mfcc_no2 = fbank(no2)
-mfcc_yes3 = fbank(yes3)
-plot_spectrogram(mfcc_yes1,'fbank','yes1')
-# plot_spectrogram(mfcc_no2)
-# plot_spectrogram(mfcc_yes3)
-
-print(DTWDistance(mfcc_yes1,mfcc_yes3))
-
-print(DTWDistance(mfcc_no2,mfcc_yes3))
