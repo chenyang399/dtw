@@ -4,9 +4,9 @@ import librosa
 from basic_operator import *
 
 
-yes1 = "/home/chenyang/chenyang_space/dtw/wav/yes1.wav"
-no2  =  "/home/chenyang/chenyang_space/dtw/wav/no2.wav"
-yes3 =  "/home/chenyang/chenyang_space/dtw/wav/yes3.wav"
+yes1 = "yes1.wav"
+no2  =  "no2.wav"
+yes3 =  "yes3.wav"
 def mfcc(path):
     data,fs=librosa.load(path)
     # print(data)
@@ -76,7 +76,7 @@ def DTWDistance(s1, s2):
   
     for i in range(len1):
         for j in range(len2):
-            dist[i][j]=np.sqrt(sum((s1[i][:]-s2[j][:])*(s1[i][:]-s2[j][:])))
+            dist[i][j]=(sum((s1[i][:]-s2[j][:])*(s1[i][:]-s2[j][:])))
 
  
     for i in range(len1):
